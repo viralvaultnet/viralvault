@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aamirpro05-debug.github.io/viralvault/sitemap.xml

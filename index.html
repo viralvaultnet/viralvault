@@ -1,205 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ViralVault - Discover useful online tools, video resources, image resources and helpful digital guides.">
-  <meta name="robots" content="index, follow">
-  <title>ViralVault - Free Online Tools & Digital Resources</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #202b3c;
-      line-height: 1.6;
-    }
-    header {
-      background: #172554;
-      color: white;
-      padding: 24px 16px;
-      text-align: center;
-    }
-    header h1 { margin: 0; font-size: 36px; }
-    header p { margin: 8px 0 0; }
-    nav {
-      background: #1e40af;
-      padding: 12px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 24px 16px;
-    }
-    .hero {
-      background: white;
-      padding: 28px 20px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 3px 14px #0000000c;
-    }
-    .hero h2 { color: #1d4ed8; }
-    .search {
-      width: 100%;
-      max-width: 450px;
-      padding: 13px;
-      border: 1px solid #ccd5e3;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 3px 14px #0000000c;
-    }
-    .card h3 { color: #1d4ed8; margin-top: 0; }
-    .button {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .article {
-      background: white;
-      margin-top: 24px;
-      padding: 22px;
-      border-radius: 12px;
-    }
-    footer {
-      background: #172554;
-      color: white;
-      text-align: center;
-      padding: 22px;
-      margin-top: 30px;
-    }
-    footer a { color: white; margin: 0 8px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViralVault - Free Online Tools & Digital Resources</title>
+<meta name="description" content="ViralVault offers free online tools like a word counter and simple guides about images, videos and getting started online.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aamirpro05-debug.github.io/viralvault/">
+<meta property="og:title" content="ViralVault - Free Online Tools & Digital Resources">
+<meta property="og:description" content="ViralVault offers free online tools like a word counter and simple guides about images, videos and getting started online.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>ViralVault</h1>
-    <p>Your Hub for Free Online Tools and Digital Resources</p>
-  </header>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Viral<span>Vault</span></a>
+<nav aria-label="Main"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="free-online-tools.html">Tools</a></li><li><a href="guides.html">Guides</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+</div></header>
+<main>
+<div class="wrap">
+<div class="hero">
+<h1>Free online tools and <em>simple guides</em> for everyday digital work.</h1>
+<p>ViralVault brings together handy tools and easy-to-read guides about images, videos and getting started online.</p>
+<a class="btn" href="free-online-tools.html">Try the free tools</a><a class="btn ghost" href="guides.html">Read the guides</a>
+</div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#tools">Tools</a>
-    <a href="#guides">Guides</a>
-    <a href="#about">About</a>
-  </nav>
+<section id="tools"><h2>Free Online Tools</h2>
+<div class="grid">
+<div class="card"><span class="tag">Tool</span><h3>Word &amp; Character Counter</h3><p>Count words, characters, sentences and reading time instantly. Nothing you type leaves your device.</p><a class="more" href="free-online-tools.html">Open the counter &rarr;</a></div>
+</div></section>
 
-  <main id="home">
-    <section class="hero">
-      <h2>Discover Useful Online Resources</h2>
-      <p>Explore helpful tools, learn new digital skills and discover useful resources in one place.</p>
-      <input class="search" id="search" type="search"
-        placeholder="Search tools and guides..." aria-label="Search tools and guides">
-    </section>
+<section id="guides"><h2>Latest Digital Guides</h2>
+<div class="grid">
+<div class="card"><span class="tag">Guide</span><h3>Image Download Guide</h3><p>Learn about image formats, quality and how to check a license before you use a picture.</p><a class="more" href="image-download-guide.html">Read guide &rarr;</a></div>
+<div class="card"><span class="tag">Guide</span><h3>Video Download Guide</h3><p>Understand video formats and file sizes, and the safe, permitted ways to save media.</p><a class="more" href="video-download-guide.html">Read guide &rarr;</a></div>
+<div class="card"><span class="tag">Guide</span><h3>Getting Started with Online Earning</h3><p>A realistic beginner overview of skills, freelancing and affiliate programs, with no false promises.</p><a class="more" href="online-earning-guide.html">Read guide &rarr;</a></div>
+</div></section>
 
-    <section id="tools">
-      <h2>Explore Our Resources</h2>
-      <div class="grid" id="cards">
-        <article class="card">
-          <h3>Free Online Tools</h3>
-          <p>Discover tools for everyday digital tasks, productivity and working online.</p>
-          <a class="button" href="#guides">Explore Guides</a>
-        </article>
-        <article class="card">
-          <h3>Video Resources</h3>
-          <article class="card">
-  <h3>Image Download Guide</h3>
-            <article class="card">
-  <h3>Free Online Tools</h3>
-  <p>Use our free word and character counter and explore helpful online guides.</p>
-  <a class="button" href="free-online-tools.html">Open Free Tools</a>
-</article>
-  <p>Learn about image formats, quality and safe image downloads.</p>
-  <a class="button" href="image-download-guide.html">Learn More</a>
-</article>
-          <p>Learn about video formats, file sizes and safe ways to access downloadable media.</p>
-          <a class="button" href="video-download-guide.html">Learn More</a>
-        </article>
-        <article class="card">
-          <h3>Image Resources</h3>
-          <p>Explore image formats, resizing tips and free image resources for your projects.</p>
-          <a class="button" href="#image-guide">Learn More</a>
-        </article>
-        <article class="card">
-          <h3>Online Earning Guides</h3>
-          <p>Learn about beginner-friendly digital skills, websites and affiliate marketing.</p>
-          <a class="button" href="#earning-guide">Read Guide</a>
-        </article>
-      </div>
-      <p id="no-results" hidden>No matching resources found. Try another search.</p>
-    </section>
-
-    <section class="article" id="guides">
-      <h2>Latest Digital Guides</h2>
-      <h3 id="video-guide">How to Download Videos Safely</h3>
-      <p>Use the original website's download option whenever available. Only download content you own or have permission to save, and respect copyright restrictions.</p>
-
-      <h3 id="image-guide">How to Find Useful Images</h3>
-      <p>Choose images from reputable free-image libraries and check their license before using them on websites, social media or commercial projects.</p>
-
-      <h3 id="earning-guide">Getting Started with Online Earning</h3>
-      <p>Start by learning a useful skill, creating original content and exploring legitimate affiliate programs. Earnings are not guaranteed and usually require time and effort.</p>
-    </section>
-
-    <section class="article" id="about">
-      <h2>About ViralVault</h2>
-      <p>ViralVault is a digital resource website designed to help visitors discover useful online tools, media resources and beginner-friendly guides.</p>
-      <p>We aim to publish helpful, original and easy-to-understand information for our readers.</p>
-    </section>
-
-    <section class="article">
-      <h2>Privacy Policy</h2>
-      <p>This website may use Google Analytics to understand visitor activity and improve the website. Information is handled according to Google's applicable policies and settings.</p>
-      <p>Contact the website owner for privacy-related questions.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 ViralVault. All rights reserved.</p>
-    <a href="#about">About</a>
-    <a href="#guides">Guides</a>
-    <a href="#home">Back to top</a>
-  </footer>
-
-  <script>
-    const search = document.getElementById('search');
-    const cards = [...document.querySelectorAll('#cards .card')];
-    const noResults = document.getElementById('no-results');
-
-    search.addEventListener('input', function () {
-      const term = this.value.toLowerCase().trim();
-      let visible = 0;
-
-      cards.forEach(function (card) {
-        const match = card.textContent.toLowerCase().includes(term);
-        card.hidden = !match;
-        if (match) visible++;
-      });
-
-      noResults.hidden = visible !== 0;
-    });
-  </script>
+<section id="about"><h2>About ViralVault</h2>
+<p style="max-width:40rem;color:var(--muted)">ViralVault is a digital resource website that helps visitors discover useful online tools and beginner-friendly guides. We aim to publish helpful, original and easy-to-understand information. <a href="about.html">Learn more about us</a>.</p>
+</section>
+</div>
+</main>
+<footer class="site"><div class="wrap">
+<div>&copy; <span id="yr">2026</span> ViralVault. All rights reserved.</div>
+<ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul>
+</div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>

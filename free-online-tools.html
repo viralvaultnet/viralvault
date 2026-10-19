@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Online Tools | ViralVault</title>
-  <meta name="description" content="Discover useful free online tools for images, text, file sizes and everyday tasks with ViralVault.">
-  <link rel="canonical" href="https://aamirpro05-debug.github.io/viralvault/free-online-tools.html">
-  <style>
-    body{font-family:Arial,sans-serif;max-width:850px;margin:30px auto;padding:20px;line-height:1.8;color:#222}
-    h1,h2{color:#5635b5}
-    .tool{background:#f3f0ff;padding:15px;margin:15px 0;border-radius:10px}
-    input,textarea,button{font:inherit;padding:10px;max-width:100%;box-sizing:border-box}
-    button{cursor:pointer;background:#5635b5;color:white;border:0;border-radius:6px}
-    a{color:#5635b5}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Word & Character Counter | ViralVault</title>
+<meta name="description" content="Free online word and character counter with sentences, paragraphs and reading time. Works in your browser; your text is never uploaded.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aamirpro05-debug.github.io/viralvault/free-online-tools.html">
+<meta property="og:title" content="Free Word & Character Counter | ViralVault">
+<meta property="og:description" content="Free online word and character counter with sentences, paragraphs and reading time. Works in your browser; your text is never uploaded.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Free Online Tools</h1>
-  <p>Explore simple browser-based tools for everyday tasks. These tools run on this page without needing an account.</p>
-
-  <div class="tool">
-    <h2>1. Word and Character Counter</h2>
-    <p>Type or paste text to count words and characters.</p>
-    <textarea id="textInput" rows="5" style="width:100%" placeholder="Type your text here..."></textarea>
-    <p id="countResult">Words: 0 | Characters: 0</p>
-    <button onclick="countText()">Count Text</button>
-  </div>
-
-  <div class="tool">
-    <h2>2. Image Guide</h2>
-    <p>Learn about JPG, PNG and WebP image formats and safe image use.</p>
-    <a href="image-download-guide.html">Read the Image Download Guide</a>
-  </div>
-
-  <div class="tool">
-    <h2>3. Video Guide</h2>
-    <p>Learn about video formats, file sizes and safe downloads.</p>
-    <a href="video-download-guide.html">Read the Video Download Guide</a>
-  </div>
-
-  <h2>Why Use Online Tools?</h2>
-  <p>Simple online tools can save time on common tasks. Always check the privacy practices of a website before entering confidential information.</p>
-
-  <h2>Frequently Asked Questions</h2>
-  <p><strong>Are these tools free?</strong><br>Yes, the tools and guides on this page are free to use.</p>
-  <p><strong>Do I need to create an account?</strong><br>No account is needed for the word counter on this page.</p>
-
-  <p><a href="index.html">Return to ViralVault homepage</a></p>
-  <hr>
-  <p>ViralVault — Helpful guides for your digital life.</p>
-  <p>Copyright 2026 ViralVault.</p>
-
-  <script>
-    function countText() {
-      const text = document.getElementById('textInput').value;
-      const trimmed = text.trim();
-      const words = trimmed ? trimmed.split(/\s+/).length : 0;
-      document.getElementById('countResult').textContent =
-        'Words: ' + words + ' | Characters: ' + text.length;
-    }
-    document.getElementById('textInput').addEventListener('input', countText);
-  </script>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Viral<span>Vault</span></a>
+<nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="free-online-tools.html" aria-current="page">Tools</a></li><li><a href="guides.html">Guides</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+</div></header>
+<main>
+<div class="wrap"><article class="page"><div class="crumb"><a href="index.html">Home</a> / Tools</div><h1>Word &amp; Character Counter</h1><p class="lead">Paste or type your text below to see the counts update instantly.</p>
+<label for="t" style="font-weight:600;display:block;margin-bottom:.4rem">Your text</label>
+<textarea id="t" placeholder="Start typing or paste your text here..."></textarea>
+<div class="stats" aria-live="polite">
+<div class="stat"><b id="w">0</b><span>Words</span></div>
+<div class="stat"><b id="c">0</b><span>Characters</span></div>
+<div class="stat"><b id="cn">0</b><span>Without spaces</span></div>
+<div class="stat"><b id="s">0</b><span>Sentences</span></div>
+<div class="stat"><b id="p">0</b><span>Paragraphs</span></div>
+<div class="stat"><b id="r">0 min</b><span>Reading time</span></div>
+</div>
+<button class="btn" id="copy" type="button" style="margin-top:0">Copy text</button>
+<button class="btn ghost" id="clear" type="button" style="margin-top:0">Clear</button>
+<div class="note">Privacy: this counter runs entirely in your browser. The text you enter is never uploaded or stored.</div>
+<h2>How the counts work</h2>
+<ul><li><b>Words</b> are groups of characters separated by spaces or line breaks.</li>
+<li><b>Reading time</b> assumes about 200 words per minute.</li>
+<li><b>Sentences</b> are counted from full stops, question marks and exclamation marks.</li></ul>
+<script>
+(function(){
+  var t=document.getElementById("t");
+  function set(id,v){document.getElementById(id).textContent=v;}
+  function update(){
+    var v=t.value, trimmed=v.trim();
+    var words=trimmed?trimmed.split(/\s+/).length:0;
+    set("w",words); set("c",v.length); set("cn",v.replace(/\s/g,"").length);
+    set("s",trimmed?(trimmed.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[]).length:0);
+    set("p",trimmed?trimmed.split(/\n\s*\n/).filter(function(x){return x.trim();}).length:0);
+    set("r",words?Math.max(1,Math.ceil(words/200))+" min":"0 min");
+  }
+  t.addEventListener("input",update);
+  document.getElementById("clear").addEventListener("click",function(){t.value="";update();t.focus();});
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this;
+    function done(){b.textContent="Copied!";setTimeout(function(){b.textContent="Copy text";},1500);}
+    if(navigator.clipboard){navigator.clipboard.writeText(t.value).then(done);}
+    else{t.select();document.execCommand("copy");done();}
+  });
+  update();
+})();
+</script></article></div>
+</main>
+<footer class="site"><div class="wrap">
+<div>&copy; <span id="yr">2026</span> ViralVault. All rights reserved.</div>
+<ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="disclaimer.html">Disclaimer</a></li></ul>
+</div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>
